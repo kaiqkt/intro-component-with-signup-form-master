@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: repeat;
+    background-image: url('./images/bg-intro-desktop.png');
+    background-color: hsl(0, 100%, 74%);
+}
+
+main {
+    max-width: 1150px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    grid-gap: 20px;
+}
+
+.box-information {
+    color: white;
+    width: 500px;
+}
+
+.box-information h1 {
+    font-weight: 700;
+    font-size: 3.0em;
+    margin-bottom: 20px;;
+}
+
+.box-information p {
+    line-height: 1.5;
+}
+
+.box-form{
+    background-color: white;
+    padding: 25px 35px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box-form button {
+    width: 100%;
+    background-color: #37cc8a;
+    border: 1px solid #37cc8a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
+    height: 50px;
+    color: white;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.box-form input{
+    height: 50px;
+}
+
+.box-form .termos{
+    text-align: center;
+    font-size: 0.7em;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+.box-form .termos span{
+    font-weight: 600;
+    color: hsl(0, 100%, 74%);
+    cursor: pointer;
+}
+
+.card-price{
+    background-color: #5d54a3;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    color: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-control.is-invalid, .was-validated .form-control:invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url('./images/icon-error.svg') !important;
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.invalid-feedback {
+    text-align-last: end;
+}
+
+@media(max-width: 1024px) {
+    body {
+        padding: 20px;
+        background-repeat: repeat;
+        text-align: -webkit-center;
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+    main {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: (3, 'min-content');
+        width: 95%;
+        grid-gap: 15px;
+    }
+}
